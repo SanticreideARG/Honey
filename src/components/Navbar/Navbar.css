@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap');
+
+.navbar-dark{
+    background-color: #f7b398;
+}
+.navbar-logo{
+    height: 86px;
+}
+
+.nav-item{
+    margin: 0px 15px;
+    font-size: 1.3rem;
+    font-family: 'Nunito', sans-serif;
+
+}
+.dropdown-menu{
+    background-color: #F7B398;
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+
+}
