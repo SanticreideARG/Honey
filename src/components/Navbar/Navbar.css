@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap');
 
-.navbar-dark{
-    background-color: #f7b398;
-}
+
 .navbar-logo{
-    height: 86px;
+    height: 80px;
 }
 
 .nav-item{
@@ -18,4 +16,10 @@
     font-size: 1.2rem;
     font-family: 'Nunito', sans-serif;
 
+}
+.user-icon{
+    height: 80px;
+    border-radius: 100%;
+    border: 5px solid #ffc3ac;
+    margin-right: 10px;
 }

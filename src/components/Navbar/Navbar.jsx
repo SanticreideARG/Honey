@@ -1,5 +1,6 @@
 import './Navbar.css';
-import logo from './img/pink-logo.png';
+import CartWidget from '../CartWidget/CartWidget';
+import logo from './img/transparent-logo.png';
 
 const Navbar = () =>{
     return (
@@ -73,6 +74,7 @@ const Navbar = () =>{
               </li>
             </ul>
             <form className="d-flex">
+              <CartWidget />
               <input
                 className="form-control me-sm-2"
                 type="text"
