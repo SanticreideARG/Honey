@@ -2,7 +2,7 @@
 
 
 .navbar-logo{
-    height: 80px;
+    height: 68px;
 }
 
 .nav-item{
@@ -12,14 +12,11 @@
 
 }
 .dropdown-menu{
-    background-color: #F7B398;
+    background-color: #D98BAF;
     font-size: 1.2rem;
     font-family: 'Nunito', sans-serif;
 
 }
-.user-icon{
-    height: 80px;
-    border-radius: 100%;
-    border: 5px solid #ffc3ac;
-    margin-right: 10px;
-}
+.header .navbar {
+    background-color: #BF567D !important;
+  }

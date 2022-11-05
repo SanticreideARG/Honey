@@ -1,14 +1,15 @@
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import CartWidget from '../CartWidget/CartWidget';
 import logo from './img/transparent-logo.png';
-
 const Navbar = () =>{
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <header className='header'>      
+        <nav className="navbar navbar-expand-lg bg-primary" >
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link to={'/'}>
           <img className="navbar-logo" src={logo} alt="" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler collapsed"
             type="button"
@@ -27,20 +28,20 @@ const Navbar = () =>{
           >
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <Link className="nav-link active" to="/">
                   Inicio
                   <span className="visually-hidden">(current)</span>
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/">
                   Novedades
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/">
                   Ofertas
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -51,42 +52,31 @@ const Navbar = () =>{
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Shop
+                  Categorias
                 </a>
                 <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">
-                    Blusas
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Remeras
-                  </a>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/category/1">
+                    Abrigos
+                  </Link>
+                  <Link className="dropdown-item" to="/category/2">
+                    Bottoms
+                  </Link>
+                  <Link className="dropdown-item" to="/category/3">
                     Vestidos
-                  </a>
-                  <div className="dropdown-divider" />
-                  <a className="dropdown-item" href="#">
-                    Pantalones
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Sacos & Blazers
-                  </a>
+                  </Link>
+                  <Link className="dropdown-item" to="/category/4">
+                    Body
+                  </Link>
                 </div>
               </li>
             </ul>
             <form className="d-flex">
               <CartWidget />
-              <input
-                className="form-control me-sm-2"
-                type="text"
-                placeholder="Buscar"
-              />
-              <button className="btn btn-secondary my-2 my-sm-0" type="submit">
-                Buscar
-              </button>
             </form>
           </div>
         </div>
       </nav>
+      </header>
     )
 }
 
