@@ -9,7 +9,9 @@
         "stock": 30,
         "talle": "Unico",
         "img": "valentino1.webp",
-        "img2": "valentino2.webp"
+        "img2": "valentino2.webp",
+        "oferta": false,
+        "novedad": false
     },
     {
         "id": 2,
@@ -21,7 +23,9 @@
         "stock": 17,
         "talle": "Unico",
         "img": "berlin1.webp",
-        "img2": "berlin2.webp"
+        "img2": "berlin2.webp",
+        "oferta": false,
+        "novedad": false
 
     },
     {
@@ -34,7 +38,9 @@
         "stock": 19,
         "talle": "Talle S/M y M/L",
         "img": "yanel1.webp",
-        "img2": "yanel2.webp"
+        "img2": "yanel2.webp",
+        "oferta": true,
+        "novedad": true
     },
     {
         "id": 4,
@@ -46,7 +52,9 @@
         "stock": 16,
         "talle": "Talle Unico S",
         "img": "brasil1.webp",
-        "img2": "brasil2.webp"
+        "img2": "brasil2.webp",
+        "oferta": false,
+        "novedad": false
     },
     {
         "id": 5,
@@ -58,7 +66,9 @@
         "stock": 24,
         "talle": "Talle Unico S",
         "img": "reina1.webp",
-        "img2": "reina2.webp"
+        "img2": "reina2.webp",
+        "oferta": false,
+        "novedad": true
     },
     {
         "id": 6,
@@ -70,7 +80,9 @@
         "stock": 16,
         "talle": "Talle Unico S",
         "img": "tulum1.webp",
-        "img2": "tulum2.webp"
+        "img2": "tulum2.webp",
+        "oferta": false,
+        "novedad": true
     },
     {
         "id": 7,
@@ -82,7 +94,9 @@
         "stock": 24,
         "talle": "Talle Unico S",
         "img": "uma1.webp",
-        "img2": "uma2.webp"
+        "img2": "uma2.webp",
+        "oferta": false,
+        "novedad": false
     },
     {
         "id": 8,
@@ -94,7 +108,9 @@
         "stock": 16,
         "talle": "Talle Unico S",
         "img": "flora1.webp",
-        "img2": "flora2.webp"
+        "img2": "flora2.webp",
+        "oferta": false,
+        "novedad": true
     },
     {
         "id": 9,
@@ -106,7 +122,9 @@
         "stock": 18,
         "talle": "Talle Unico S",
         "img": "clara1.webp",
-        "img2": "clara2.webp"
+        "img2": "clara2.webp",
+        "oferta": true,
+        "novedad": false
     },
     {
         "id": 10,
@@ -118,7 +136,9 @@
         "stock": 21,
         "talle": "Talle Unico S",
         "img": "roma1.webp",
-        "img2": "roma2.webp"
+        "img2": "roma2.webp",
+        "oferta": true,
+        "novedad": false
     },
     {
         "id": 11,
@@ -130,7 +150,9 @@
         "stock": 11,
         "talle": "Talle Unico S",
         "img": "dior1.webp",
-        "img2": "dior2.webp"
+        "img2": "dior2.webp",
+        "oferta": false,
+        "novedad": true
     },
     {
         "id": 12,
@@ -142,7 +164,9 @@
         "stock": 9,
         "talle": "Talle Unico S",
         "img": "brenda1.webp",
-        "img2": "brenda2.webp"
+        "img2": "brenda2.webp",
+        "oferta": false,
+        "novedad": false
     },
     {
         "id": 13,
@@ -154,7 +178,9 @@
         "stock": 19,
         "talle": "Talle Unico S",
         "img": "polly1.webp",
-        "img2": "polly2.webp"
+        "img2": "polly2.webp",
+        "oferta": false,
+        "novedad": true
     },
     {
         "id": 14,
@@ -166,7 +192,9 @@
         "stock": 16,
         "talle": "Talle Unico S",
         "img": "armani1.webp",
-        "img2": "armani2.webp"
+        "img2": "armani2.webp",
+        "oferta": false,
+        "novedad": false
     },
     {
         "id": 15,
@@ -178,7 +206,9 @@
         "stock": 19,
         "talle": "Talle Unico S",
         "img": "carla1.webp",
-        "img2": "carla2.webp"
+        "img2": "carla2.webp",
+        "oferta": true,
+        "novedad": false
     },
     {
         "id": 16,
@@ -190,7 +220,9 @@
         "stock": 16,
         "talle": "Talle Unico S",
         "img": "lila1.webp",
-        "img2": "lila2.webp"
+        "img2": "lila2.webp",
+        "oferta": false,
+        "novedad": false
     },
     {
         "id": 17,
@@ -202,7 +234,9 @@
         "stock": 17,
         "talle": "Talle Unico S",
         "img": "lupe1.webp",
-        "img2": "lupe2.webp"
+        "img2": "lupe2.webp",
+        "oferta": true,
+        "novedad": true
     },
     {
         "id": 18,
@@ -214,7 +248,9 @@
         "stock": 15,
         "talle": "Talle Unico S",
         "img": "diana1.webp",
-        "img2": "diana2.webp"
+        "img2": "diana2.webp",
+        "oferta": false,
+        "novedad": true
     }
     
 ]

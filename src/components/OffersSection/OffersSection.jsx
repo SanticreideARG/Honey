@@ -1,34 +1,27 @@
 import { useState, useEffect } from "react";
+import { consultarProductos } from "../../assets/funciones";
 import ItemList from "../itemList/itemList.jsx";
-import { consultarProductos } from "../../assets/funciones.js";
-import { useParams } from "react-router-dom";
 
-const ItemListContainer = () => {
+const OffersContainer = () => {
   const [productos, setProductos] = useState([]);
-  const { category } = useParams();
 
   useEffect(() => {
-    if (category) {
       consultarProductos("../json/productos.json").then((products) => {
         const productsList = products.filter(
-          (prod) => prod.idCategoria === parseInt(category)
+          (prod) => prod.oferta === true
         );
         const cardProductos = ItemList({ productsList });
         setProductos(cardProductos);
       });
-    } else {
-      consultarProductos("./json/productos.json").then((productsList) => {
-        const cardProductos = ItemList({ productsList });
-        setProductos(cardProductos);
-      });
-    }
-  }, [category]);
+  }, []);
 
   return (
     <div className="container-margin">
+            <h1 className="text-center pt-4 pb-3">Ofertas</h1>
       <div className="container-productos">{productos}</div>
     </div>
   );
 };
 
-export default ItemListContainer;
+
+export default OffersContainer;
