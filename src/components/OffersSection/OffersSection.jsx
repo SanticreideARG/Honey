@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { consultarBDD } from "../../assets/funciones";
 import ItemList from "../itemList/itemList.jsx";
+import bannerw from './img/ofertashorizontal.png';
+import bannerv from './img/ofertasvertical.png';
 
 const OffersContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -16,10 +18,13 @@ const OffersContainer = () => {
   }, []);
 
   return (
+    <>
+    <img className="banner-wide" src={bannerw} alt="" />
+    <img className="banner-vertical" src={bannerv} alt="" />
     <div className="container-margin">
-            <h1 className="text-center pt-4 pb-3">Ofertas</h1>
       <div className="container-productos">{productos}</div>
     </div>
+    </>
   );
 };
 

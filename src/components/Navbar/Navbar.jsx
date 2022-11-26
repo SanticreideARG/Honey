@@ -8,7 +8,7 @@ const Navbar = () =>{
         <nav className="navbar navbar-expand-lg bg-primary" >
         <div className="container-fluid">
           <Link to={'/'}>
-          <img className="navbar-logo" src={logo} alt="" />
+          <img className="navbar-logo brand" src={logo} alt="" />
           </Link>
           <button
             className="navbar-toggler collapsed"

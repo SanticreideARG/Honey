@@ -29,11 +29,23 @@ const ItemListContainer = () => {
 
   return (
     <>
-    <img className="banner-wide" src={bannerw} alt="" />
-      <img className="banner-vertical" src={bannerv} alt="" />
-    <div className="container-margin">
-      <div className="container-productos">{productos}</div>
+    { (category) ?
+    <div>
+       <div className="container-margin">
+       <div className="container-productos">{productos}</div>
+       <br></br>
+       <br></br>
+       </div>
     </div>
+    :
+    <div>
+        <img className="banner-wide" src={bannerw} alt="" />
+        <img className="banner-vertical" src={bannerv} alt="" />
+        <div className="container-margin">
+        <div className="container-productos">{productos}</div>
+    </div>
+    </div>
+    }
     </>
   );
 };

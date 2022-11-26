@@ -14,7 +14,7 @@ const CartWidget = () => {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <p>{getItemQuantity()}</p>
+                    <p className='cart-widget-quantity'>{getItemQuantity()}</p>
                 </li>
             </ul>     
             </>
