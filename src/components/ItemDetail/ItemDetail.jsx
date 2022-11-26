@@ -1,6 +1,17 @@
 import React from "react";
+import { useContext } from "react";
+import {Link} from 'react-router-dom'
+import ItemCount from "../ItemCount/ItemCount";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = ({ producto }) => {
+  const {cart, isInCart, addItem} = useContext(CartContext)
+
+  const onAdd = (contador) => {
+      addItem(producto, contador)
+  }
+
+
   return (
     <div className="row g-0 product-detail">
       <div className="col-md-6">
@@ -12,14 +23,14 @@ const ItemDetail = ({ producto }) => {
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src={`../images/${producto.img}`}
+                src={producto.img}
                 alt="imagen producto"
                 className="detail-image d-block"
               />
             </div>
             <div class="carousel-item">
               <img
-                src={`../images/${producto.img2}`}
+                src={producto.img2}
                 alt="imagen producto"
                 className="detail-image d-block"
               />
@@ -53,7 +64,8 @@ const ItemDetail = ({ producto }) => {
           <p className="card-text">${producto.precio}</p>
           <p className="card-text">Talle: {producto.talle}</p>
           <p className="card-text">Stock: {producto.stock}</p>
-          <button className="card-button">Agregar al carrito</button>
+          <ItemCount stock = {producto.stock} onAdd={onAdd}/> <br />
+          <button className="btn btn-secondary"><Link to="/checkout" className="nav-link">Finalizar compra</Link></button>
         </div>
       </div>
     </div>

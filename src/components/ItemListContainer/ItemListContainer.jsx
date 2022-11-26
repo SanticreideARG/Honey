@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import ItemList from "../itemList/itemList.jsx";
-import { consultarProductos } from "../../assets/funciones.js";
+import { consultarBDD } from "../../assets/funciones.js";
 import { useParams } from "react-router-dom";
+import bannerw from './img/followusoninsta.png';
+import bannerv from './img/followusoninstavertical.png';
+
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -9,7 +12,7 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     if (category) {
-      consultarProductos("../json/productos.json").then((products) => {
+      consultarBDD("../json/productos.json").then((products) => {
         const productsList = products.filter(
           (prod) => prod.idCategoria === parseInt(category)
         );
@@ -17,7 +20,7 @@ const ItemListContainer = () => {
         setProductos(cardProductos);
       });
     } else {
-      consultarProductos("./json/productos.json").then((productsList) => {
+      consultarBDD("./json/productos.json").then((productsList) => {
         const cardProductos = ItemList({ productsList });
         setProductos(cardProductos);
       });
@@ -25,9 +28,13 @@ const ItemListContainer = () => {
   }, [category]);
 
   return (
+    <>
+    <img className="banner-wide" src={bannerw} alt="" />
+      <img className="banner-vertical" src={bannerv} alt="" />
     <div className="container-margin">
       <div className="container-productos">{productos}</div>
     </div>
+    </>
   );
 };
 

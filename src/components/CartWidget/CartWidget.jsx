@@ -1,17 +1,24 @@
-import React from 'react';
-import { Link } from "react-router-dom";
 import cart from './img/cart.png';
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
 const CartWidget = () => {
+    const {getItemQuantity} = useContext(CartContext)
     return (
         <>
-          <Link className="nav-link" to="/cart">
-                        <button className="btn">
-                        <img className="navbar-logo" src={cart} alt="" />
-                        </button>
+            <ul className='navbar-nav me-auto cartWidget'>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/cart">
+                            <img className="navbar-logo" src={cart} alt="" />
                     </Link>
-        </>
+                </li>
+                <li className="nav-item">
+                    <p>{getItemQuantity()}</p>
+                </li>
+            </ul>     
+            </>
     );
-};
+}
 
 export default CartWidget;

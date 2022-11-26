@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { consultarProductos } from "../../assets/funciones";
+import { consultarBDD } from "../../assets/funciones";
 import ItemList from "../itemList/itemList.jsx";
+import bannerw from './img/coleccionverano2022horizontal.png';
+import bannerv from './img/coleccionverano2022vertical.png';
 
 const NewProducts = () => {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-      consultarProductos("../json/productos.json").then((products) => {
+    consultarBDD("../json/productos.json").then((products) => {
         const productsList = products.filter(
           (prod) => prod.novedad === true
         );
@@ -16,10 +18,13 @@ const NewProducts = () => {
   }, []);
 
   return (
+    <>
+    <img className="banner-wide" src={bannerw} alt="" />
+    <img className="banner-vertical" src={bannerv} alt="" />
     <div className="container-margin">
-      <h1 className="text-center pt-4 pb-3">Novedades</h1>
       <div className="container-productos">{productos}</div>
     </div>
+    </>
   );
 };
 

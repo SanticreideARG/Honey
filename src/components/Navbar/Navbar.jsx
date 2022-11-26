@@ -28,7 +28,7 @@ const Navbar = () =>{
           >
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <Link className="nav-link active" to="/">
+                <Link className="nav-link" to="/">
                   Inicio
                   <span className="visually-hidden">(current)</span>
                 </Link>
@@ -59,7 +59,7 @@ const Navbar = () =>{
                     Abrigos
                   </Link>
                   <Link className="dropdown-item" to="/category/2">
-                    Bottoms
+                    Faldas
                   </Link>
                   <Link className="dropdown-item" to="/category/3">
                     Vestidos

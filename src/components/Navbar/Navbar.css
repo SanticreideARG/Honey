@@ -2,7 +2,8 @@
 
 
 .navbar-logo{
-    height: 68px;
+    height: 80px;
+    background-color: none;
 }
 
 .nav-item{
@@ -18,5 +19,17 @@
 
 }
 .header .navbar {
-    background-color: #BF567D !important;
+    background: rgb(191,86,125) !important;
+    background: linear-gradient(90deg, rgb(255, 151, 188) 0%, rgb(255, 182, 208) 50%) !important;
   }
+
+.nav-link{
+    color: azure ;
+}
+
+@media (min-width: 800px) {
+    .navbar-header{
+        display: table;
+        margin: 0 auto;
+    }
+}

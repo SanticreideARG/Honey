@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { consultarProductos } from "../../assets/funciones";
+import { consultarBDD } from "../../assets/funciones";
 import ItemList from "../itemList/itemList.jsx";
 
 const OffersContainer = () => {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-      consultarProductos("../json/productos.json").then((products) => {
+    consultarBDD("../json/productos.json").then((products) => {
         const productsList = products.filter(
           (prod) => prod.oferta === true
         );
