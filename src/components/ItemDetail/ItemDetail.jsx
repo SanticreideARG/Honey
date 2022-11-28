@@ -15,7 +15,7 @@ const ItemDetail = ({ producto }) => {
 
   return (
     <div className="row g-0 product-detail">
-      <div className="col-md-6">
+      <div className="col-md-6 item-detail-card">
         <div
           id="carouselExampleControls"
           class="carousel  carousel-dark slide"
@@ -59,14 +59,15 @@ const ItemDetail = ({ producto }) => {
       </div>
       <div className="col-md-6">
         <div className="card-body">
-          <h5 className="card-title">{producto.marca}</h5>
-          <p className="card-text">{producto.nombre}</p>
+          <h5 className="card-title mt-4">{producto.marca}</h5>
+          <h5 className="card-title">{producto.nombre}</h5>
           <p className="card-text"> {producto.descripcion}</p>
-          <p className="card-text">${producto.precio}</p>
+          <p className="card-text price">$ {producto.precio}</p>
+          <small>*El precio incluye IVA</small>
           <p className="card-text">Talle: {producto.talle}</p>
           <p className="card-text">Stock: {producto.stock}</p>
           <ItemCount stock = {producto.stock} onAdd={onAdd}/> <br />
-          <button className="btn btn-secondary"><Link to="/checkout" className="nav-link">Finalizar compra</Link></button>
+          <button className="btn btn-secondary mt-3"><Link to="/checkout" className="nav-link">Finalizar compra</Link></button>
         </div>
       </div>
     </div>

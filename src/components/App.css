@@ -5,6 +5,7 @@ body{
 
     }
     .navbar-cart{
+        padding-top: 7px;
         height: 50px;
     }
     .center-this{
@@ -53,8 +54,8 @@ body{
     }
     .card-text{
         /* (price) */
-    font-size: 22px;
-    font-family: Monospace, 'Outfit', sans-serif;
+    font-size: 19px;
+    font-family: 'Outfit', sans-serif;
     }
     .card-button{
     border-radius: 6px;
@@ -80,6 +81,19 @@ body{
     height: 70vh;
     }
 
+    small{
+        position: absolute;
+        font-size: 12px;
+        margin-top: -53px;
+        margin-left: 40px;
+        color: #7c7c7c;
+    }
+    .price{
+        font-weight: 500;
+        background-color: #f3d1e1;
+        border-radius: 8px;
+        font-size: 24px;
+    }
     .cart-item{
         height: 30vh;
         display: grid;
@@ -139,6 +153,10 @@ body{
         margin-left: 5px;
     }
 
+    .item-count-btn{
+        width: 10px;
+        height: 10px;
+    }
 
     .outerline{
     box-shadow: 0px 5px 4px 0px rgba(44, 44, 44, 0.3);
@@ -167,7 +185,7 @@ footer{
     }
 .footer-logo{
     height: 70px;
-    margin-left: 33%;
+    margin-left: 31%;
     }
 .grid-container{
     display: grid;
@@ -177,9 +195,8 @@ footer{
     text-decoration: none;
 }
 .footer-link{
-    text-decoration: none;
     color: rgb(65, 0, 24);
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* Mediaqueries */
@@ -195,7 +212,7 @@ footer{
         margin-left: 13%;
         }
     .detail-image{
-        margin-left: 58px;
+        margin-left: 18px;
         }
     .container-productos{
     grid-template-columns: 1fr 1fr ;
@@ -231,6 +248,6 @@ footer{
 
     }
     .detail-image{
-        margin-left: 70px;
+        margin-left: 80px;
     }
     }

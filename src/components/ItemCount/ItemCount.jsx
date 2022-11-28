@@ -18,12 +18,14 @@ const ItemCount = ({stock, onAdd}) => {
     return (
         <>
             <button onClick={decrementar} className='btn btn-light botItem'>
-                <img src={downArrow} alt="" srcset="" />
+                <img src={downArrow} alt="" srcset=""  className='item-count-btn'/>
             </button>
                     {contador}
-            <button onClick={incrementar} className='btn btn-light botItem'>+</button>
+            <button onClick={incrementar} className='btn btn-light botItem'>
+            <img src={upArrow} alt="" srcset="" className='item-count-btn'/>
+            </button>
             <br>
-            </br><button className="btn btn-dark" onClick={agregarAlCarrito}><Link to="/cart" className="nav-link">Agregar al Carrito</Link></button>
+            </br><button className="btn btn-dark mt-3" onClick={agregarAlCarrito}><Link to="/cart" className="nav-link">Agregar al Carrito</Link></button>
         </>          
 
     );

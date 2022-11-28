@@ -11,25 +11,25 @@ const Footer = () => {
             <div className='grid-container'>
                 <div className="footer-section">
                 <Link  to="/">
-                <img src={logo} alt="" className='center-this footer-logo' />
+                <img src={logo} alt="" className='center-this footer-logo mt-3 mb-4' />
                 </Link>
 
                 </div>
-                <div className="footer-section">
+                <div className="footer-section mt-3">
 
-                <Link  to="/terms">
-                    <p className='footer-link text-center decoration-none'>Terminos y Politicas</p>
+                <Link className='decoration-none'  to="/terms">
+                    <p className='footer-link text-center decoration-none'>Términos y Políticas</p>
                 </Link>
 
-                <Link  to="/faq">
-                    <p className='footer-link text-center decoration-none'>Ayuda / FAQ</p>
+                <Link  className='decoration-none' to="/faq">
+                    <p className='footer-link text-center decoration-none '>Ayuda / FAQ</p>
                 </Link>
                 </div>
-                <div className="footer-section">
-                <Link  to="/contact">
+                <div className="footer-section mt-3">
+                <Link className='decoration-none'  to="/contact">
                     <p className='footer-link text-center decoration-none'>Contacto</p>
                 </Link>
-                <a href="https://santiagocreide.netlify.app/" target="_blank" rel="noopener noreferrer"  className=' center-this footer-link'>Web Designer</a><br></br>
+                <a href="https://santiagocreide.netlify.app/" target="_blank" rel="noopener noreferrer"  className=' center-this footer-link decoration-none'>Web Designer</a><br></br>
                 </div>
             </div>
             <hr></hr>
