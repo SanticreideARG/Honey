@@ -76,7 +76,7 @@ body{
     }
     .detail-image{
     margin-top: 25px;
-    margin-left: 80px;
+    margin-left: 10px;
     height: 70vh;
     }
 
@@ -177,15 +177,18 @@ footer{
 }
 
 /* Mediaqueries */
-
+@media (min-width: 480px) {
+    .detail-image{
+    margin-left: 48px;}
+    }
 @media (min-width: 680px) {
     .cardProducto{
         grid-template-columns: 2fr 1fr;
     }
+
     .detail-image{
-        min-height: 80vh;
-        margin-left: 70px;
-    }
+        margin-left: 58px;
+        }
     .container-productos{
     grid-template-columns: 1fr 1fr ;
     }
@@ -215,5 +218,8 @@ footer{
         grid-template-columns: 2fr 7fr;
         width: 90%;
 
+    }
+    .detail-image{
+        margin-left: 70px;
     }
     }
