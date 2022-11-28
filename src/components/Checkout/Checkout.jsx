@@ -1,21 +1,27 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const Checkout = () => {
     const datosFormulario = React.useRef()
     const consultarFormulario = (e) => {
         e.preventDefault()
-        console.log(datosFormulario)
         const datForm = new FormData(datosFormulario.current)
         const valores = Object.fromEntries(datForm)
         console.log(valores)
-        e.target.reset()
+        // e.target.reset()
+        window.location = '/sucess';
+
     }
 
     return (
-        <div className="container">
+        <div className="container mt-4">
             <form onSubmit={consultarFormulario} ref={datosFormulario}>
+            <div className="mb-3">
+                    <label htmlFor="nombre" className="form-label">Nombre</label>
+                    <input type="text" className="form-control" name="nombre" />
+                </div>
                 <div className="mb-3">
-                    <label htmlFor="nombre" className="form-label">Nombre y Apellido</label>
+                    <label htmlFor="apellido" className="form-label">Apellido</label>
                     <input type="text" className="form-control" name="nombre" />
                 </div>
                 <div className="mb-3">

@@ -1,5 +1,6 @@
 import React from "react";
 import { useContext } from "react";
+import {useState} from 'react';
 import {Link} from 'react-router-dom'
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
@@ -66,7 +67,6 @@ const ItemDetail = ({ producto }) => {
           <p className="card-text">Stock: {producto.stock}</p>
           <ItemCount stock = {producto.stock} onAdd={onAdd}/> <br />
           <button className="btn btn-secondary"><Link to="/checkout" className="nav-link">Finalizar compra</Link></button>
-
         </div>
       </div>
     </div>

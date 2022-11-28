@@ -12,6 +12,7 @@ import Footer from './Footer/Footer';
 import Terms from './Terms/Terms';
 import Faq from './Faq/Faq';
 import Contact from './Contact/Contact';
+import Sucess from './Sucess/Sucess';
 
 const App = () => {
   
@@ -31,6 +32,8 @@ const App = () => {
           <Route path='/terms' element={<Terms/>}></Route>
           <Route path='/faq' element={<Faq/>}></Route>
           <Route path='/contact' element={<Contact/>}></Route>
+          <Route path='/sucess' element={<Sucess/>}></Route>
+
         </Routes>
         <Footer>
         </Footer>

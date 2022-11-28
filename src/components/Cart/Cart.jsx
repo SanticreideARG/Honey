@@ -10,14 +10,14 @@ const Cart = () => {
         <>
            
             {cart.length === 0 ? 
-            <div className="emptycart">
+            <div className="center-this">
                 <img className="mt-4" src={EmptyCart} alt="" />
-                <p className="emptycart mt-4">Tu carrito esta vacio</p>
-                <Link to={'/'}><button className="btn btn-dark emptycart mt-4">Ir al inicio</button></Link>
+                <p className="center-this mt-4">Tu carrito esta vacio</p>
+                <Link to={'/'}><button className="btn btn-dark center-this mt-4">Ir al inicio</button></Link>
                 <br></br><br></br><br></br><br></br><br></br>
             </div> 
             : 
-            <div className="container mt-2 ">
+            <div className="container mt-4 ">
                 {cart.map((prod,indice) =><div className="card mb-3" key={indice}>
                 <div className="container cart-item">
                     <img src={prod.img} className="img-fluid" alt="..." />

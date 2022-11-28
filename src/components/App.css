@@ -7,7 +7,7 @@ body{
     .navbar-cart{
         height: 50px;
     }
-    .emptycart{
+    .center-this{
         display: table;
         margin: auto;
     }
@@ -127,6 +127,8 @@ body{
         box-shadow: 0px 5px 4px 0px rgba(44, 44, 44, 0.3);
         border: 1px solid #d8d8d8;
         padding: 10px;
+        background-color: hsl(0, 0%, 100%);
+
     }
 
     .btn-finalizar{
@@ -165,10 +167,14 @@ footer{
     }
 .footer-logo{
     height: 70px;
+    margin-left: 33%;
     }
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-columns: auto;
+}
+.decoration-none{
+    text-decoration: none;
 }
 .footer-link{
     text-decoration: none;
@@ -185,7 +191,9 @@ footer{
     .cardProducto{
         grid-template-columns: 2fr 1fr;
     }
-
+    .footer-logo{
+        margin-left: 13%;
+        }
     .detail-image{
         margin-left: 58px;
         }
@@ -206,6 +214,9 @@ footer{
         grid-template-columns: 3fr 7fr;
         width: 90%;
 
+    }
+    .grid-container{
+        grid-template-columns: 1fr 1fr 1.5fr;
     }
 }
     @media (min-width: 1080px) {
