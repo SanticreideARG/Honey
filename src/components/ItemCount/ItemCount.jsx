@@ -1,5 +1,8 @@
 import {useState} from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import upArrow from './img/up-arrow.svg';
+import downArrow from './img/down-arrow.svg';
+
 
 const ItemCount = ({stock, onAdd}) => {
     const [contador, setContador] = useState(1) //valor inicial
@@ -14,7 +17,9 @@ const ItemCount = ({stock, onAdd}) => {
     
     return (
         <>
-            <button onClick={decrementar} className='btn btn-light botItem'>-</button>
+            <button onClick={decrementar} className='btn btn-light botItem'>
+                <img src={downArrow} alt="" srcset="" />
+            </button>
                     {contador}
             <button onClick={incrementar} className='btn btn-light botItem'>+</button>
             <br>

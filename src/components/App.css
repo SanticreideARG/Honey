@@ -4,12 +4,19 @@ body{
     background-color:#faebf2;
 
     }
+    .navbar-cart{
+        height: 50px;
+    }
+    .emptycart{
+        display: table;
+        margin: auto;
+    }
 
     .cart-widget-quantity{
-    background-color: #000000;
-    color: #faebf2;
-    padding: 5px;
+    color: #000000;
     border-radius: 100%;
+    font-size: 26px;
+    margin-top: 10px;
     }
     .container-productos{
     background-color:#faebf2;
@@ -19,6 +26,7 @@ body{
 
     .card-img-top{
     height: 100%;
+    min-width: 170px;
     width: 100%;
     margin: auto;
     border-radius: 5px;
@@ -32,7 +40,7 @@ body{
     border-radius: 12px;
     border: 1px solid hsl(212, 45%, 89%);
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr;
     text-align: center;
     font-family: 'Outfit', sans-serif;
     box-shadow: 0px 5px 4px 0px rgba(44, 44, 44, 0.3);
@@ -60,30 +68,81 @@ body{
     .card-button:hover{
     background-color: #d63b84;
     }
-    .card-body{
-    margin: 40px;
-    }
 
     .itemDetail{
     margin-top: 20px;
     text-align: center;
-    height: 85vh;
+    
     }
     .detail-image{
     margin-top: 25px;
-    max-height: 80vh;
+    margin-left: 80px;
+    height: 70vh;
     }
 
-    .container-margin{
-    margin: 0px 70px;
+    .cart-item{
+        height: 30vh;
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+        width: 90%;
+
     }
+    .cart-item img{
+        margin-left: -35px;
+        height: 30vh;
+        object-fit: cover;
+    }
+    .cart-item-detail{
+        height: 20vh;
+    }
+    .cart-title{
+        font-size: 20px;
+        margin: 0;
+        }
+    .cart-text{
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .remove-item-btn{
+        margin-top: 6px;
+        background-color: #a31356;
+        border-radius: 6px;
+        padding: 7px;
+        color: #faebf2;
+        
+    }
+    .remove-item-btn:hover{
+        background-color: #aa2e68;
+        color: #d3abbd;
+        
+    }
+
+    .total-cart{
+        font-size: 30px;
+        font-weight: 300;
+    }
+
+    .cart-price-container{
+        box-shadow: 0px 5px 4px 0px rgba(44, 44, 44, 0.3);
+        border: 1px solid #d8d8d8;
+        padding: 10px;
+    }
+
+    .btn-finalizar{
+        background-color: #13a313;
+        border-radius: 6px;
+        padding: 7px;
+        color: #faebf2;
+        margin-left: 5px;
+    }
+
+
     .outerline{
     box-shadow: 0px 5px 4px 0px rgba(44, 44, 44, 0.3);
-    border: 4px solid #000000;}
-
-
-
-
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 4px;}
 
     .banner-wide{
     width: 0%;
@@ -98,32 +157,34 @@ body{
 /* Footer Section */
 footer{
     background: rgb(191,86,125) !important;
-    background: linear-gradient(90deg, rgb(187, 30, 85) 0%, rgb(255, 72, 139) 50%) !important;
+    background: linear-gradient(90deg, rgb(138,128,170) 0%, rgb(129, 115, 179) 50%) !important;
     margin-top: 240px;
     padding: 25px;
+    border-top: 2px solid #8173b3;
+    border-bottom: 2px solid #8173b3;
     }
 .footer-logo{
-    height: 90px;
+    height: 70px;
     }
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1.5fr;
 }
-
-
-
-
-
+.footer-link{
+    text-decoration: none;
+    color: rgb(65, 0, 24);
+    font-weight: 400;
+}
 
 /* Mediaqueries */
 
-@media (min-width: 768px) {
+@media (min-width: 680px) {
     .cardProducto{
         grid-template-columns: 2fr 1fr;
     }
     .detail-image{
-    max-height: 70vh;
-    margin-left: 70px;
+        min-height: 80vh;
+        margin-left: 70px;
     }
     .container-productos{
     grid-template-columns: 1fr 1fr ;
@@ -136,15 +197,23 @@ footer{
     width: 0%; 
     margin-bottom: 0px;
     }
+    .cart-item{
+        height: 30vh;
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        width: 90%;
+
+    }
 }
-    @media (min-width: 1280px) {
+    @media (min-width: 1080px) {
     .container-productos{
     grid-template-columns: 1fr 1fr 1fr;
     }
+    .cart-item{
+        height: 30vh;
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+        width: 90%;
+
     }
-    @media (max-width: 628px){
-        .cardProducto{
-            grid-column: auto;
-            grid-template-rows: 2fr 1fr;
-        }
     }

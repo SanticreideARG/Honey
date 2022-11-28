@@ -2,44 +2,27 @@
 
 .navbar-logo{
     height: 50px;
-    background-color: none;
-    margin: auto;
+    margin-right: 40px;
 }
 
 .nav-item{
     margin: 0px 10px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-
 }
 .dropdown-menu{
-    background-color: #e72f85;
+    background-color: rgb(139,129,174)s;
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
 
 }
 .header .navbar {
-    background: rgb(191,86,125) !important;
-    background: linear-gradient(90deg, rgb(187, 30, 85) 0%, rgb(255, 72, 139) 50%) !important;
+    background: rgb(139,129,174) !important;
+    background: linear-gradient(90deg, rgb(138,128,170) 0%, rgb(129, 115, 179) 50%) !important;
   }
 
 .nav-link{
     color: azure ;
 }
 
-@media (max-width: 975px) {
-    .brand {
-        transform: translateX(-50%);
-        left: 50%;
-        position: absolute;
-        top: 20%;
-      }
-      .navbar{
-        min-height: 70px;
-      }
-      .nav-item:first-child{
-       margin-top: 180px;
-    
-    }
-}

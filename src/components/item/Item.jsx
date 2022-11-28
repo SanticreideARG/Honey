@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 const Item = ({ prod }) => {
   return (
     <div className="card cardProducto">
+        <Link to={`/product/${prod.id}`}>
       <img src={prod.img} className="card-img-top" alt="..." />
+      </Link>
       <div className="card-body">
         <h5 className="card-title">
           {prod.nombre} {prod.marca}

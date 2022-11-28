@@ -9,6 +9,9 @@ import OffersContainer from './OffersSection/OffersSection';
 import NewProducts from './NewProducts/NewProducts';
 import Checkout from './Checkout/Checkout'
 import Footer from './Footer/Footer';
+import Terms from './Terms/Terms';
+import Faq from './Faq/Faq';
+import Contact from './Contact/Contact';
 
 const App = () => {
   
@@ -25,6 +28,9 @@ const App = () => {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/category/:category' element={<ItemListContainer/>}/>
           <Route path='/checkout' element={<Checkout/>}></Route>
+          <Route path='/terms' element={<Terms/>}></Route>
+          <Route path='/faq' element={<Faq/>}></Route>
+          <Route path='/contact' element={<Contact/>}></Route>
         </Routes>
         <Footer>
         </Footer>

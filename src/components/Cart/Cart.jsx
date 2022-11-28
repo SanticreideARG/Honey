@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext"; 
 import { Link } from "react-router-dom";
+import EmptyCart from './img/box-empty.svg'
+
 const Cart = () => {
     const {cart, emptyCart, totalPrice, removeItem} = useContext(CartContext)
 
@@ -8,34 +10,35 @@ const Cart = () => {
         <>
            
             {cart.length === 0 ? 
-            <div>
-                <p>Tu carrito esta vacio</p><br></br><br></br><br></br><br></br><br></br>
-                <Link to={'/'}><button className="btn btn-dark">Ir al inicio</button></Link>
+            <div className="emptycart">
+                <img className="mt-4" src={EmptyCart} alt="" />
+                <p className="emptycart mt-4">Tu carrito esta vacio</p>
+                <Link to={'/'}><button className="btn btn-dark emptycart mt-4">Ir al inicio</button></Link>
+                <br></br><br></br><br></br><br></br><br></br>
             </div> 
             : 
-            <div>
-                {cart.map((prod,indice) =><div className="card mb-3" key={indice} style={{maxWidth: '540px'}}>
-                <div className="row g-0">
-                    <div className="col-md-4">
-                    <img src={prod.img} className="img-fluid rounded-start" alt="..." />
-                </div>
-                    <div className="col-md-8">
-                        <div className="card-body">
-                            <h5 className="card-title">{prod.nombre}</h5>
-                            <p className="card-text">Cantidad: {prod.cant}</p>
-                            <p className="card-text">Precio unitario: {prod.precio}</p>
-                            <p className="card-text">Subtotal: {prod.precio * prod.cant}</p>
+            <div className="container mt-2 ">
+                {cart.map((prod,indice) =><div className="card mb-3" key={indice}>
+                <div className="container cart-item">
+                    <img src={prod.img} className="img-fluid" alt="..." />
+                    <div className="cart-item-detail">
+                        <div className="cart-item-body">
+                            <p className="cart-title">{prod.nombre}</p>
+                            <p className="cart-title"> {prod.marca}</p>
+                            <p className="cart-text">Cantidad: {prod.cant}</p>
+                            <p className="cart-text">Precio por unidad: ${prod.precio}</p>
+                            <p className="cart-text">Subtotal: ${prod.precio * prod.cant}</p>
                         </div>
-                        <button className="btn btn-danger" onClick={() => removeItem(prod.id)}>Eliminar Producto</button>
+                        <button className="btn remove-item-btn" onClick={() => removeItem(prod.id)}>  Eliminar Producto</button>
                     </div>
                 </div>
             </div>
             )}
-            <div>
-                <p>Total: {totalPrice()}</p>
+            <div className="cart-price-container">
+                <p className="total-cart">Total: ${totalPrice()}</p>
                 <button className="btn btn-danger" onClick={emptyCart}>Vaciar Carrito</button>
                 <Link to="/checkout">
-                    <button className="btn btn-primary">Finalizar Compra</button>
+                    <button className="btn btn-finalizar">Finalizar Compra</button>
                 </Link>
             </div>
             </div>

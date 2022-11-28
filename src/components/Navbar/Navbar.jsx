@@ -65,7 +65,7 @@ const Navbar = () =>{
                     Vestidos
                   </Link>
                   <Link className="dropdown-item" to="/category/4">
-                    Body
+                    Bodys
                   </Link>
                 </div>
               </li>
