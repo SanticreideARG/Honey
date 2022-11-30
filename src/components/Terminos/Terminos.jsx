@@ -21,13 +21,6 @@ const Terminos = () => {
         definición de una contraseña.
       </p>
       <p>
-        El usuario puede elegir y cambiar la clave para su acceso de
-        administración de la cuenta en cualquier momento, en caso de que se haya
-        registrado y que sea necesario para la compra de alguno de nuestros
-        productos. www.urbanstore.com.ar no asume la responsabilidad en caso de
-        que entregue dicha clave a terceros.
-      </p>
-      <p>
         Todas las compras y transacciones que se lleven a cabo por medio de este
         sitio web, están sujetas a un proceso de confirmación y verificación, el
         cual podría incluir la verificación del stock y disponibilidad de
@@ -37,26 +30,8 @@ const Terminos = () => {
         por medio de correo electrónico.
       </p>
       <p>
-        Los precios de los productos ofrecidos en www.urbanstore.com.ar son
-        válidos solamente en las compras realizadas en dicha tienda online.
-      </p>
-
-      <h6>Licencia</h6>
-      <p>
-        URBAN Store a través de su sitio web concede una licencia para que los
-        usuarios utilicen los productos que son vendidos en este sitio web de
-        acuerdo a los Términos y Condiciones que se describen en este documento.
-      </p>
-
-      <h6>Propiedad</h6>
-      <p>
-        Todos los productos publicados y la elaboración del contenido son
-        propiedad de URBAN y de los proveedores de marcas con los que URBAN se
-        encuentra asociado. La empresa URBAN no será responsable de ningún tipo
-        de daño que no fuera directo de fábrica, pero no limitado a, daños
-        directos, indirectos, especiales, fortuitos o consecuentes u otras
-        pérdidas resultantes del uso o de la imposibilidad de utilizar nuestros
-        productos.
+        Los precios de los productos ofrecidos en aqui son
+        válidos solamente en las compras realizadas en esta tienda online.
       </p>
 
       <h6>Política de reembolso y garantía</h6>
@@ -111,9 +86,7 @@ const Terminos = () => {
         nuestra Plataforma. Si cambiamos materialmente la forma en que tratamos
         los datos personales, le proporcionaremos un aviso previo o, cuando sea
         legalmente necesario, solicitaremos su consentimiento antes de llevar a
-        cabo dichos cambios. Le recomendamos encarecidamente que lea nuestra
-        Política y se mantenga informado de nuestras prácticas. Esta Política
-        fue modificada por última vez el 06 de septiembre de 2022.
+        cabo dichos cambios.
       </p>
 
       <p>
@@ -121,7 +94,7 @@ const Terminos = () => {
         Política y prácticas de privacidad. Si desea enviarnos sus comentarios,
         preguntas o inquietudes, o si desea ejercer sus derechos relacionados
         con sus datos personales, por favor enviando un correo electrónico a
-        mmstore.ar@gmail.com.
+        honeynqn@gmail.com.
       </p>
       <Link className="mt-3" to="/">
         <p>Volver a Inicio</p>
