@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Faq = () => {
   return (
     <div className="container">
-      <h3 className="mt-4 mb-4 center-this">Preguntas Frecuentes</h3>
+      <h3 className="mt-4 mb-4 center-this sec-title">Preguntas Frecuentes</h3>
 
       <h6>¿Cuándo voy a recibir mi pedido?</h6>
 

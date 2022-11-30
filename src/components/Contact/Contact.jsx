@@ -17,9 +17,9 @@ const Contact = () => {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="message" className="form-label">Escribinos!</label>
-                    <input type="placeholder" className="form-control" name="message" />
+                    <input type="placeholder" className="form-control cnt-plhdr" name="message" />
                 </div>
-                <button type="submit" className="btn btn-primary">Enviar</button>
+                <button type="submit" className="btn cnt-bsend">Enviar</button>
                 </form>
                 <Link to="/">
                 <p className='mt-5'>Volver a Inicio</p>

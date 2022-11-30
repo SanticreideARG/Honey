@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Terminos = () => {
   return (
     <div className="container">
-      <h3 className="mt-4 mb-4">Terminos y Condiciones</h3>
+      <h3 className="mt-4 mb-4 sec-title center-this">Terminos y Condiciones</h3>
 
       <h6>Términos y Condiciones de uso</h6>
       <p>

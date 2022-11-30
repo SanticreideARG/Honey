@@ -19,8 +19,8 @@
 }
 .header .navbar {
     background: rgb(139,129,174) !important;
-    background: linear-gradient(90deg, rgb(138,128,170) 0%, rgb(129, 115, 179) 50%) !important;
-    border-bottom: 1px solid #8173b3;
+    background: linear-gradient(90deg, rgb(138,128,170) 0%, rgb(100, 85, 151) 50%) !important;
+    border-bottom: 1px solid #62568f;
   }
 
 .nav-link{
