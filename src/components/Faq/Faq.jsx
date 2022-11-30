@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Faq = () => {
   return (
     <div className="container">
-      <h3 className="mt-4 mb-4">Preguntas Frecuentes</h3>
+      <h3 className="mt-4 mb-4 center-this">Preguntas Frecuentes</h3>
 
       <h6>¿Cuándo voy a recibir mi pedido?</h6>
 
@@ -100,7 +100,7 @@ const Faq = () => {
         {" "}
         https://www.mercadopago.com.ar/mercado-credito/comprar-cuotas-sin-tarjeta{" "}
       </a>
-
+      <br></br>
       <h6>CAMBIOS Y DEVOLUCIONES </h6>
 
       <p>

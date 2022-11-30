@@ -14,12 +14,7 @@ const ItemDetail = ({ producto }) => {
 
   return (
     <div className="row g-0 product-detail">
-      <div className="col-md-6">
-        <div className="card-body">
-          <h5 className="mt-4 detail-title">{producto.marca}</h5>
-          <h5 className="card-title">{producto.nombre}</h5>
-          <p className="card-text"> {producto.descripcion}</p>
-          <div className="col-md-6 ">
+      <div className="col-md-6 ">
         <div
           id="carouselExampleControls"
           class="carousel  carousel-dark slide"
@@ -61,6 +56,11 @@ const ItemDetail = ({ producto }) => {
           </button>
         </div>
       </div>
+      <div className="col-md-6">
+        <div className="card-body">
+          <h5 className="card-title mt-4">{producto.marca}</h5>
+          <h5 className="card-title">{producto.nombre}</h5>
+          <p className="card-text"> {producto.descripcion}</p>
           <p className="card-text price">$ {producto.precio}</p>
           <small>*El precio incluye IVA</small>
           <p className="card-text">Talle: {producto.talle}</p>
