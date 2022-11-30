@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { consultarBDD } from "../../assets/funciones";
+import { getProductos } from "../../assets/firebase.js";
 import ItemList from "../itemList/itemList.jsx";
 import bannerw from './img/ofertashorizontal.png';
 import bannerv from './img/ofertasvertical.png';
@@ -8,7 +8,7 @@ const OffersContainer = () => {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    consultarBDD("../json/productos.json").then((products) => {
+    getProductos().then((products) => {
         const productsList = products.filter(
           (prod) => prod.oferta === true
         );

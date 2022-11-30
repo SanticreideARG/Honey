@@ -8,8 +8,8 @@ const Checkout = () => {
         const datForm = new FormData(datosFormulario.current)
         const valores = Object.fromEntries(datForm)
         console.log(valores)
-        // e.target.reset()
         window.location = '/sucess';
+        // e.target.reset()
 
     }
 

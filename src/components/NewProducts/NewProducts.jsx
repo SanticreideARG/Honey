@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import { consultarBDD } from "../../assets/funciones";
 import ItemList from "../itemList/itemList.jsx";
 import bannerw from './img/coleccionverano2022horizontal.png';
 import bannerv from './img/coleccionverano2022vertical.png';
+import { getProductos } from "../../assets/firebase.js";
 
 const NewProducts = () => {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    consultarBDD("../json/productos.json").then((products) => {
+    getProductos().then((products) => {
         const productsList = products.filter(
           (prod) => prod.novedad === true
         );

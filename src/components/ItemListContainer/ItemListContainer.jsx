@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import ItemList from "../itemList/itemList.jsx";
-import { consultarBDD } from "../../assets/funciones.js";
 import { useParams } from "react-router-dom";
 import bannerw from './img/followusoninsta.png';
 import bannerv from './img/followusoninstavertical.png';
+import { getProductos } from "../../assets/firebase.js";
 
 
 const ItemListContainer = () => {
@@ -12,7 +12,7 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     if (category) {
-      consultarBDD("../json/productos.json").then((products) => {
+      getProductos().then((products) => {
         const productsList = products.filter(
           (prod) => prod.idCategoria === parseInt(category)
         );
@@ -20,7 +20,7 @@ const ItemListContainer = () => {
         setProductos(cardProductos);
       });
     } else {
-      consultarBDD("./json/productos.json").then((productsList) => {
+      getProductos().then((productsList) => {
         const cardProductos = ItemList({ productsList });
         setProductos(cardProductos);
       });

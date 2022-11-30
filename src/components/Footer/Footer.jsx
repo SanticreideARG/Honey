@@ -17,7 +17,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-section mt-3">
 
-                <Link className='decoration-none'  to="/terms">
+                <Link className='decoration-none'  to="/terminos">
                     <p className='footer-link text-center decoration-none'>Términos y Políticas</p>
                 </Link>
 

@@ -26,7 +26,7 @@ const Faq = () => {
         Una vez que realizaste tu compra, nos pondremos en contacto a la
         brevedad para coordinar el día y horario de envío. Los envíos se
         realizan en un plazo de 24 a 48 hs (dependiendo el día y horario en que
-        se realizó la compra)
+        se realizó la compra).
       </p>
 
       <h6>¿Cuál es el costo de envío?</h6>

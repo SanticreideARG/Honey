@@ -14,37 +14,76 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore();
 
-const cargarBDD = async () =>{
-    const promise = await fetch('./json/productos.json');
-    const productos = await promise.json();
-    productos.forEach(async (prod) =>{
-        await  addDoc(collection(db, "productos"), {
-            idCategoria: prod.idCategoria,
-            nombre: prod.nombre,
-            marca: prod.marca,
-            descripcion: prod.descripcion,
-            precio: prod.precio,
-            stock: prod.stock,
-            talle: prod.talle,
-            img: prod.img,
-            img2: prod.img2,
-            oferta: prod.oferta,
-            novedad: prod.novedad
-
-        })
-    })
+const getProductos = async() => {
+    const productos = await getDocs(collection(db, "productos"))
+    const items = productos.docs.map(prod => {return {...prod.data(), id: prod.id}})
+    return items
 }
 
-export {cargarBDD}
-// "id":
-// "idCategoria": 
-// "nombre": "Saco de Gamuza",
-// "marca": "Yanel",
-// "descripcion": 
-// "precio":
-// "stock":
-// "talle":
-// "img":
-// "img2": 
-// "oferta": 
-// "novedad":
+const getProducto = async (id) => {
+    const prod = await getDoc(doc(db, "productos",id))
+    let item
+    if(prod.data()) {
+        item = {...prod.data(), id: prod.id}
+    } else {
+        item = "Producto no encontrado"
+    }
+    
+    return item
+}
+
+
+
+const createProducto = async (objProducto) => {
+    const estado = await addDoc(collection(db, "productos"), {
+        idCategoria: objProducto.idCategoria,
+        nombre: objProducto.nombre,
+        marca: objProducto.marca,
+        descripcion: objProducto.descripcion,
+        precio: objProducto.precio,
+        stock: objProducto.stock,
+        talle: objProducto.talle,
+        img: objProducto.img,
+        img2: objProducto.img2,
+        oferta: objProducto.oferta,
+        novedad: objProducto.novedad
+    })
+
+    return estado
+}
+
+const updateProducto = async(id, info) => {
+    const estado = await updateDoc(doc(db, "productos",id), info)
+    return estado
+}
+
+const deleteProducto = async(id) => {
+    const estado = await deleteDoc(doc(db,"productos", id))
+    return estado
+}
+
+
+//CREATE AND READ ORDENES DE COMPRA
+
+const createOrdenCompra = async (cliente, preTotal, fecha) => {
+    const ordenCompra = await addDoc(collection(db, "ordenCompra"), {
+        nombre: cliente.nombre,
+        apellido: cliente.apellido,
+        email: cliente.email,
+        dni: cliente.dni,
+        celular:cliente.celular,
+        direccion: cliente.direccion,
+        fecha: fecha,
+        precioTotal: preTotal
+    })
+
+    return ordenCompra
+}
+
+const getOrdenCompra = async(id) => {
+    const item = await getDoc(doc(db, "ordenCompra", id))
+    const ordenCompra = {...item.data(), id: item.id}
+    return ordenCompra
+}
+
+export {getProductos, getProducto, createProducto, updateProducto, deleteProducto, createOrdenCompra, getOrdenCompra}
