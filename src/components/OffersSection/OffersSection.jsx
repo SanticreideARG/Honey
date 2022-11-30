@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { getProductos } from "../../assets/firebase.js";
 import ItemList from "../itemList/itemList.jsx";
-import bannerw from './img/ofertashorizontal.png';
-import bannerv from './img/ofertasvertical.png';
+import bannerw from './img/ofertashorizontal.webp';
+import bannerv from './img/ofertasvertical.webp';
 
 const OffersContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -12,8 +12,8 @@ const OffersContainer = () => {
         const productsList = products.filter(
           (prod) => prod.oferta === true
         );
-        const cardProductos = ItemList({ productsList });
-        setProductos(cardProductos);
+        const cardProducts = ItemList({ productsList });
+        setProductos(cardProducts);
       });
   }, []);
 

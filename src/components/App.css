@@ -66,9 +66,19 @@ body{
     color: #faebf2;
     font-size: 20px;
     }
+.card-price{
+    font-size: 35px;
+    margin: 15px 0px;
+}
 .card-button:hover{
     background-color: #d63b84;
     }
+.pill-container{
+    margin-top: 25px;
+}
+.item-pill{
+    height: 25px;
+}
 .detail-title{
     font-size: 25px;
     }

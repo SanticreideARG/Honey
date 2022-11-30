@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ItemList from "../itemList/itemList.jsx";
-import bannerw from './img/coleccionverano2022horizontal.png';
-import bannerv from './img/coleccionverano2022vertical.png';
+import bannerw from './img/coleccionverano2022horizontal.webp';
+import bannerv from './img/coleccionverano2022vertical.webp';
 import { getProductos } from "../../assets/firebase.js";
 
 const NewProducts = () => {
@@ -12,8 +12,8 @@ const NewProducts = () => {
         const productsList = products.filter(
           (prod) => prod.novedad === true
         );
-        const cardProductos = ItemList({ productsList });
-        setProductos(cardProductos);
+        const cardProducts = ItemList({ productsList });
+        setProductos(cardProducts);
       });
   }, []);
 

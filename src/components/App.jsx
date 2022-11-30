@@ -1,5 +1,6 @@
 import './App.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+// import Layout from "./pages/Layout"; // Optional, but useful
 //context
 import { CartContextProvider } from '../context/CartContext';
 //components
@@ -15,6 +16,7 @@ import Terminos from './Terminos/Terminos';
 import Faq from './Faq/Faq';
 import Contact from './Contact/Contact';
 import Sucess from './Sucess/Sucess';
+import ScrollToTop from '../assets/scrollToTop';
 //svg
 import errorImage from './Sucess/img/error.svg'
 
@@ -22,7 +24,7 @@ const App = () => {
   
   return (
     <>
-      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
+      <BrowserRouter onUpdate={() => ScrollToTop()}>
       <CartContextProvider>
         <Navbar/>
         <Routes>
