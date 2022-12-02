@@ -14,7 +14,7 @@ body{
     }
 
 .cart-widget-quantity{
-    color: #000000;
+    color: #ffffff;
     border-radius: 100%;
     font-size: 26px;
     margin-top: 10px;
@@ -211,7 +211,7 @@ label{
 footer{
     background: rgb(191,86,125) !important;
     background: linear-gradient(90deg, rgb(138,128,170) 0%, rgb(100, 85, 151) 50%) !important;
-    margin-top: 240px;
+    margin-top: 200px;
     padding: 25px;
     border-top: 2px solid #4e417a;
     }

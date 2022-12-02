@@ -20,7 +20,7 @@
 .header .navbar {
     background: rgb(139,129,174) !important;
     background: linear-gradient(90deg, rgb(138,128,170) 0%, rgb(100, 85, 151) 50%) !important;
-    border-bottom: 1px solid #62568f;
+    border-bottom: 2px solid #9f93ca;
   }
 
 .nav-link{

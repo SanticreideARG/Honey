@@ -70,9 +70,9 @@ const createOrdenCompra = async (cliente, preTotal, fecha) => {
         nombre: cliente.nombre,
         apellido: cliente.apellido,
         email: cliente.email,
-        dni: cliente.dni,
         celular:cliente.celular,
         direccion: cliente.direccion,
+        payment: cliente.payment,
         fecha: fecha,
         precioTotal: preTotal
     })

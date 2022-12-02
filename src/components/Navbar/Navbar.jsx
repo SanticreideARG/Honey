@@ -59,7 +59,7 @@ const Navbar = () =>{
                     Abrigos
                   </Link>
                   <Link className="dropdown-item" to="/category/2">
-                    Faldas
+                    Faldas/shorts
                   </Link>
                   <Link className="dropdown-item" to="/category/3">
                     Vestidos
@@ -70,9 +70,7 @@ const Navbar = () =>{
                 </div>
               </li>
             </ul>
-            <form className="d-flex">
               <CartWidget />
-            </form>
           </div>
         </div>
       </nav>

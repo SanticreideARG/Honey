@@ -24,7 +24,7 @@ const App = () => {
   
   return (
     <>
-      <BrowserRouter onUpdate={() => ScrollToTop()}>
+      <BrowserRouter>
       <CartContextProvider>
         <Navbar/>
         <Routes>
