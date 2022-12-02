@@ -17,7 +17,8 @@ const Contact = () => {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="message" className="form-label">Escribinos!</label>
-                    <input type="placeholder" className="form-control cnt-plhdr" name="message" />
+                    
+                    <textarea type="placeholder" className="form-control cnt-plhdr" name="message" />
                 </div>
                 <button type="submit" className="btn cnt-bsend">Enviar</button>
                 </form>

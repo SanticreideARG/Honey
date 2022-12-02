@@ -211,7 +211,7 @@ label{
 footer{
     background: rgb(191,86,125) !important;
     background: linear-gradient(90deg, rgb(138,128,170) 0%, rgb(100, 85, 151) 50%) !important;
-    margin-top: 200px;
+    margin-top: 100px;
     padding: 25px;
     border-top: 2px solid #4e417a;
     }
@@ -262,6 +262,9 @@ footer{
     width: 100%;
     margin-bottom: 25px;
     }
+    .bottom-banner-fix{
+        margin-bottom: -127px;
+    }
     .banner-vertical{
     width: 0%; 
     margin-bottom: 0px;
@@ -272,6 +275,9 @@ footer{
         grid-template-columns: 3fr 7fr;
         width: 90%;
 
+    }
+    .notfound-image{
+        width: 40%;
     }
     .grid-container{
         grid-template-columns: 1fr 1fr 1.5fr;

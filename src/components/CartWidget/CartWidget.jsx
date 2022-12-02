@@ -11,7 +11,8 @@ const CartWidget = () => {
             <ul className='navbar-nav me-auto cartWidget'>
                  <img className="navbar-cart" src={cart} alt="" />
                 <li className="nav-item">
-                    <p className='cart-widget-quantity'>({getItemQuantity()})</p>
+                    { getItemQuantity() >= 1 && <span className='cart-widget-quantity'>{getItemQuantity()}</span>}
+                        
                 </li>
             </ul>     
             </Link>

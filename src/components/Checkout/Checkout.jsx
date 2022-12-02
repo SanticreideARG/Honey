@@ -1,5 +1,5 @@
 import React, {useContext} from "react"
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate,} from "react-router-dom";
 import { createOrdenCompra, getProducto, updateProducto } from "../../assets/firebase"
 import { CartContext } from "../../context/CartContext"
 
@@ -21,11 +21,11 @@ const Checkout = () => {
             })
         })
         
-        createOrdenCompra(valores, totalPrice(), new Date().toISOString().slice(0, 10)).then(orden => {
+        createOrdenCompra(cart, valores, totalPrice(), new Date().toISOString().slice(0, 16)).then(orden => {
             console.log(`Su orden ${orden.id} fue creada con éxito`)
             emptyCart()
             e.target.reset()
-            navigate("/sucess/", {orderId: '${orden.id}'})
+            navigate(`/sucess/${orden.id}`)
 
         }).catch(error => {
             console.error(error)

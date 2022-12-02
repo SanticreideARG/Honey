@@ -1,0 +1,10 @@
+.login-styles{
+    display: flex;
+    flex-direction: column;
+}
+.login-styles input{
+    width: 60%;
+}
+.login-styles button{
+    width: 60%;
+}

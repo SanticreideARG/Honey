@@ -37,7 +37,7 @@ const ItemListContainer = () => {
           </div>
         </div>
       ) : (
-        <div>
+        <div className="bottom-banner-fix">
           <a target="_blank" rel="noopener noreferrer"
             href="https://www.instagram.com/honey.sanma/" >
             <img className="banner-vertical" src={bannerv} alt="" />
@@ -46,7 +46,7 @@ const ItemListContainer = () => {
             <div className="container-productos">{productos}</div>
           </div>
           <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/honey.sanma/" >
-            <img className="banner-wide" src={bannerw} alt="" />
+            <img className="banner-wide mt-3" src={bannerw} alt="" />
           </a>
         </div>
       )}

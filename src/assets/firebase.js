@@ -13,7 +13,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore();
-
 const getProductos = async() => {
     const productos = await getDocs(collection(db, "productos"))
     const items = productos.docs.map(prod => {return {...prod.data(), id: prod.id}})
@@ -65,7 +64,8 @@ const deleteProducto = async(id) => {
 
 //CREATE AND READ ORDENES DE COMPRA
 
-const createOrdenCompra = async (cliente, preTotal, fecha) => {
+const createOrdenCompra = async (productos, cliente, preTotal, fecha) => {
+    const productosToString = JSON.stringify(productos)
     const ordenCompra = await addDoc(collection(db, "ordenCompra"), {
         nombre: cliente.nombre,
         apellido: cliente.apellido,
@@ -74,11 +74,20 @@ const createOrdenCompra = async (cliente, preTotal, fecha) => {
         direccion: cliente.direccion,
         payment: cliente.payment,
         fecha: fecha,
-        precioTotal: preTotal
+        precioTotal: preTotal,
+        ordenDeCompra: productosToString
     })
 
     return ordenCompra
 }
+
+
+const getOrdenesDeCompra = async() => {
+    const ordenesDeCompra = await getDocs(collection(db, "ordenesDeCompra"))
+    const items = ordenesDeCompra.docs.map(prod => {return {...prod.data(), id: prod.id}})
+    return items
+}
+
 
 const getOrdenCompra = async(id) => {
     const item = await getDoc(doc(db, "ordenCompra", id))
@@ -86,4 +95,4 @@ const getOrdenCompra = async(id) => {
     return ordenCompra
 }
 
-export {getProductos, getProducto, createProducto, updateProducto, deleteProducto, createOrdenCompra, getOrdenCompra}
+export {getProductos, getOrdenesDeCompra, getProducto, createProducto, updateProducto, deleteProducto, createOrdenCompra, getOrdenCompra}
