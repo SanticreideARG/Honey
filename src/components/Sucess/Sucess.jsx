@@ -6,7 +6,7 @@ const Sucess = () => {
     const { id } = useParams();
 
 
-  console.log(id)
+  console.log("this.context:",  id )
     return (
         <div className='container center-this pt-3'>
             <h2  className='center-this pt-3 sec-title'>Gracias por tu compra!</h2>
